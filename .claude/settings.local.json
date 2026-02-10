@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash",
+      "WebSearch",
+      "Webfetch",
+      "Bash(npm run dev:*)",
+      "mcp__playwright",
+      "mcp__sequential-thinking",
+      "mcp__shadcn"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "playwright",
+    "context7",
+    "sequential-thinking",
+    "shadcn"
+  ],
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "idle_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:\\Program Files\\Git\\usr\\bin\\bash.exe\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/slack-notify.sh\" idle",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:\\Program Files\\Git\\usr\\bin\\bash.exe\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/slack-notify.sh\" stop",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
