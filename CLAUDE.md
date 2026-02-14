@@ -2,6 +2,11 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Project Context
+
+- PRD 문서: @docs/PRD.md
+- 개발 로드맵: @docs/ROADMAP.md
+
 ## 프로젝트 개요
 
 Next.js 15+ App Router 기반 모던 웹 스타터킷입니다. TypeScript, Tailwind CSS v4, shadcn/ui를 사용하여 구축되었습니다.
