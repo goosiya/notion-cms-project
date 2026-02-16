@@ -3,6 +3,7 @@
 import { PageHeader } from "@/components/blocks"
 import { Card, CardHeader, CardTitle, CardContent, Badge, Button } from "@/components/ui"
 import { ThemeToggle } from "@/components/providers"
+import { GiscusComments } from "@/components/blog"
 import { useTheme } from "next-themes"
 import { Sun, Moon } from "lucide-react"
 
@@ -276,6 +277,24 @@ export function ThemeToggle() {
                   <p className="text-xs text-center">destructive</p>
                 </div>
               </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* 댓글 시스템 데모 */}
+        <section>
+          <h2 className="text-2xl font-bold mb-4">댓글 시스템 (Giscus)</h2>
+          <Card>
+            <CardHeader>
+              <CardTitle>테마 자동 연동 댓글 시스템</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">
+                GitHub Discussions 기반의 Giscus 댓글 시스템입니다.
+                다크모드와 자동으로 연동되며, 위의 테마 토글 버튼으로 테마를 변경하면
+                댓글 위젯도 함께 변경됩니다.
+              </p>
+              <GiscusComments />
             </CardContent>
           </Card>
         </section>
